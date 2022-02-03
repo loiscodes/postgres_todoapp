@@ -5,10 +5,10 @@
   "main": "index.js",
   
   "scripts": {
-    "db:create": "createdb todoapp -p 5505",
-    "db:destroy": "dropdb todoapp -p 5505",
-    "db:init": "psql -f schema.sql todoapp -p 5505",
-    "db:seed": "psql -f seed.sql todoapp -p 5505",
+    "db:create": "createdb todoapp",
+    "db:destroy": "dropdb todoapp",
+    "db:init": "psql -f schema.sql todoapp",
+    "db:seed": "psql -f seed.sql todoapp",
     "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
     "start": "./node_modules/.bin/nodemon --config nodemon.json --watch index.js",
     "super-clean-install": "rm -rf node_modules/ && npm cache clean -f && npm install",

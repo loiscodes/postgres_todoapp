@@ -6,7 +6,7 @@ const cors = require('cors');
 const pgp = require("pg-promise")();
 const app = express();
 const PORT = 3000;
-const db = pgp("postgres://localhost:5505/todoapp");
+const db = pgp("postgres://localhost:5432/todoapp");
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended : true}));
